@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Areas - Premium Pastries | Southeast Nigeria</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            background: var(--wine-dark, #4A1E22);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .region-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .region-header h2 {
+            color: var(--wine-dark);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .region-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .state-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--gold-light);
+        }
+        
+        .state-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .state-header {
+            background: var(--wine);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .state-header i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+        
+        .state-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.6rem;
+        }
+        
+        .state-content {
+            padding: 25px;
+        }
+        
+        .city-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .city-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px dashed #f0f0f0;
+        }
+        
+        .city-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .city-list i {
+            color: var(--wine);
+            width: 20px;
+        }
+        
+        .delivery-fee {
+            background: linear-gradient(135deg, var(--wine-soft), white);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            text-align: center;
+            border: 1px solid var(--gold-light);
+        }
+        
+        .fee-amount {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--wine);
+            margin: 20px 0;
+        }
+        
+        .fee-note {
+            background: var(--cream);
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            color: var(--wine-dark);
+            font-weight: 600;
+        }
+        
+        .interstate-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-sm);
+            border-left: 6px solid var(--gold);
+        }
+        
+        .pickup-card {
+            background: var(--cream);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--wine);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .back-btn:hover {
+            background: var(--wine-light);
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .states-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .pickup-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" class="logo-img">
+                    <span class="logo-text">Premium Pastries</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">Our Story</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Delivery Areas</h1>
+            <p>Serving the Southeast with fresh pastries daily</p>
+        </div>
+    </div>
+
+    <div class="container page-content">
+        <div class="region-header">
+            <h2><i class="fas fa-map-marked-alt" style="color: var(--wine); margin-right: 15px;"></i> South East Nigeria</h2>
+            <p>We deliver to major cities across all five Southeast states</p>
+        </div>
+
+        <!-- States Grid - All 5 Southeast States -->
+        <div class="states-grid">
+            <!-- Anambra -->
+            <div class="state-card">
+                <div class="state-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3>Anambra</h3>
+                </div>
+                <div class="state-content">
+                    <ul class="city-list">
+                        <li><i class="fas fa-city"></i> Awka (Headquarters)</li>
+                        <li><i class="fas fa-city"></i> Onitsha</li>
+                        <li><i class="fas fa-city"></i> Nnewi</li>
+                        <li><i class="fas fa-city"></i> Ekwulobia</li>
+                        <li><i class="fas fa-city"></i> Ihiala</li>
+                        <li><i class="fas fa-city"></i> Ogidi</li>
+                        <li><i class="fas fa-city"></i> Aba</li>
+                        <li><i class="fas fa-city"></i> Umunze</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Enugu -->
+            <div class="state-card">
+                <div class="state-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3>Enugu</h3>
+                </div>
+                <div class="state-content">
+                    <ul class="city-list">
+                        <li><i class="fas fa-city"></i> Enugu City</li>
+                        <li><i class="fas fa-city"></i> Nsukka</li>
+                        <li><i class="fas fa-city"></i> Abakpa</li>
+                        <li><i class="fas fa-city"></i> Trans-Ekulu</li>
+                        <li><i class="fas fa-city"></i> Independence Layout</li>
+                        <li><i class="fas fa-city"></i> New Haven</li>
+                        <li><i class="fas fa-city"></i> Emene</li>
+                        <li><i class="fas fa-city"></i> Awgu</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Imo -->
+            <div class="state-card">
+                <div class="state-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3>Imo</h3>
+                </div>
+                <div class="state-content">
+                    <ul class="city-list">
+                        <li><i class="fas fa-city"></i> Owerri</li>
+                        <li><i class="fas fa-city"></i> Orlu</li>
+                        <li><i class="fas fa-city"></i> Okigwe</li>
+                        <li><i class="fas fa-city"></i> Mbaise</li>
+                        <li><i class="fas fa-city"></i> Oguta</li>
+                        <li><i class="fas fa-city"></i> Nekede</li>
+                        <li><i class="fas fa-city"></i> Ihiagwa</li>
+                        <li><i class="fas fa-city"></i> Umuguma</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Abia -->
+            <div class="state-card">
+                <div class="state-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3>Abia</h3>
+                </div>
+                <div class="state-content">
+                    <ul class="city-list">
+                        <li><i class="fas fa-city"></i> Umuahia</li>
+                        <li><i class="fas fa-city"></i> Aba</li>
+                        <li><i class="fas fa-city"></i> Ohafia</li>
+                        <li><i class="fas fa-city"></i> Arochukwu</li>
+                        <li><i class="fas fa-city"></i> Bende</li>
+                        <li><i class="fas fa-city"></i> Ikot Ekpene</li>
+                        <li><i class="fas fa-city"></i> Isiala Ngwa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Ebonyi -->
+            <div class="state-card">
+                <div class="state-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3>Ebonyi</h3>
+                </div>
+                <div class="state-content">
+                    <ul class="city-list">
+                        <li><i class="fas fa-city"></i> Abakaliki</li>
+                        <li><i class="fas fa-city"></i> Afikpo</li>
+                        <li><i class="fas fa-city"></i> Onueke</li>
+                        <li><i class="fas fa-city"></i> Ishiagu</li>
+                        <li><i class="fas fa-city"></i> Uburu</li>
+                        <li><i class="fas fa-city"></i> Ebonyi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delivery Fee Structure -->
+        <div class="delivery-fee">
+            <i class="fas fa-truck" style="font-size: 3rem; color: var(--wine); margin-bottom: 20px;"></i>
+            <h2 style="color: var(--wine-dark);">Delivery Fee</h2>
+            <div class="fee-amount">₦3,500</div>
+            <p style="color: #666; margin-bottom: 25px; font-size: 1.1rem;">Flat rate within same state</p>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+                <span class="fee-note"><i class="fas fa-check-circle"></i> Same State: ₦3,500</span>
+                <span class="fee-note"><i class="fas fa-check-circle"></i> Interstate: ₦5,000</span>
+                <span class="fee-note"><i class="fas fa-gift"></i> Free delivery on orders above ₦25,000</span>
+            </div>
+            
+            <p style="color: var(--wine-dark); font-weight: 600; margin-top: 20px;">
+                <i class="fas fa-clock"></i> Delivery time: 1-3 hours within city, 1-2 days interstate
+            </p>
+        </div>
+
+        <!-- Interstate Delivery -->
+        <div class="interstate-card">
+            <div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;">
+                <div style="background: var(--wine); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-exchange-alt" style="font-size: 2.5rem; color: white;"></i>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: var(--wine-dark); margin-bottom: 10px;">Interstate Delivery</h3>
+                    <p style="color: #666; margin-bottom: 15px;">Need delivery from one state to another? We handle cross-state orders daily.</p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 400px;">
+                        <div>
+                            <p style="font-weight: 600; color: var(--wine);">Same Week</p>
+                            <p style="color: #666;">Order by Tuesday</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--wine);">Next Week</p>
+                            <p style="color: #666;">Order any time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pickup Location -->
+        <div class="pickup-card">
+            <div style="background: var(--gold); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-store" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <div style="flex: 1;">
+                <h3 style="color: var(--wine-dark); margin-bottom: 10px;">Store Pickup Available</h3>
+                <p style="color: #666; margin-bottom: 10px;">Prefer to collect your order? Visit our bakery:</p>
+                <p style="font-weight: 700; color: var(--wine); font-size: 1.2rem;">
+                    <i class="fas fa-map-marker-alt"></i> 10 Marcel Eze Street,Abakiliki State
+                </p>
+                <p style="color: #666; margin-top: 10px;">
+                    <i class="fas fa-clock"></i> Pickup hours: Mon-Sat 7am-7pm, Sun 9am-4pm
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Out of Area -->
+        <div style="background: #fef2f2; padding: 35px; border-radius: 12px; margin: 50px 0; border: 1px solid #fecaca; display: flex; align-items: center; gap: 25px; flex-wrap: wrap;">
+            <div style="background: #dc2626; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 1.8rem; color: white;"></i>
+            </div>
+            <div style="flex: 1;">
+                <h4 style="color: #991b1b; margin-bottom: 8px;">Your city not listed?</h4>
+                <p style="color: #7f1d1d; margin-bottom: 12px;">We're expanding rapidly! Contact us for special delivery arrangements.</p>
+                <a href="https://wa.me/+2348153710020" class="whatsapp-btn" style="background: #25D366;">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Delivery Schedule -->
+        <div style="background: white; padding: 40px; border-radius: 12px; margin-top: 40px; box-shadow: var(--shadow-sm);">
+            <h2 style="color: var(--wine-dark); margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+                <i class="fas fa-clock" style="color: var(--wine);"></i> Delivery Schedule by State
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">🇳🇬 Anambra</h4>
+                    <p style="color: #666; margin-bottom: 5px;">Mon-Sat: 8am - 7pm</p>
+                    <p style="color: #666;">Sunday: closed</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">🇳🇬 Enugu</h4>
+                    <p style="color: #666; margin-bottom: 5px;">Mon-Sat: 9am - 6pm</p>
+                    <p style="color: #666;">Sunday: Closed</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">🇳🇬 Imo</h4>
+                    <p style="color: #666; margin-bottom: 5px;">Mon-Sat: 8am - 6pm</p>
+                    <p style="color: #666;">Sunday: 10am - 2pm</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">🇳🇬 Abia</h4>
+                    <p style="color: #666; margin-bottom: 5px;">Mon-Sat: 8am - 6pm</p>
+                    <p style="color: #666;">Sunday: Closed</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">🇳🇬 Ebonyi</h4>
+                    <p style="color: #666; margin-bottom: 5px;">Mon-Fri: 8am - 5pm</p>
+                    <p style="color: #666;">Saturday: 9am - 3pm</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #f0f7ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 12px; color: #1e40af;">
+                    <i class="fas fa-info-circle" style="font-size: 1.2rem;"></i>
+                    <strong>Holiday Notice:</strong> Delivery schedules may change during public holidays. We'll notify you via WhatsApp.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Options -->
+        <div style="text-align: center; margin: 60px 0 40px;">
+            <h3 style="color: var(--wine-dark); margin-bottom: 25px;">Questions about delivery?</h3>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/2348123456789" style="background: #25D366; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-weight: 600;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: 0815 371 0020
+                </a>
+                <a href="tel:+2348123456789" style="background: var(--wine); color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-weight: 600;">
+                    <i class="fas fa-phone"></i> Call: 0815 371 0020
+                </a>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <a href="index.html#menu" class="back-btn" style="background: var(--gold, #C6A15B); margin-left: 15px;">
+                <i class="fas fa-utensils"></i>
+                Browse Menu
+            </a>
+        </div>
+    </div>
+
+    <footer style="margin-top: 80px;">
+        <div class="container">
+            <div style="text-align: center; padding: 30px 0; color: rgba(255,255,255,0.7);">
+                <p>&copy; 2024 Premium Pastries. Delivering joy across Southeast Nigeria.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">🇳🇬 Anambra • Enugu • Imo • Abia • Ebonyi 🇳🇬</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

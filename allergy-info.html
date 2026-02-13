@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergy Information - Premium Pastries</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            background: var(--wine-dark, #4A1E22);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .warning-banner {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            border-left: 6px solid #dc2626;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .allergy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .allergy-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gold-light);
+        }
+        
+        .allergy-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--wine-soft);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .allergy-icon i {
+            font-size: 1.8rem;
+            color: var(--wine);
+        }
+        
+        .allergy-card h3 {
+            color: var(--wine-dark);
+            margin-bottom: 15px;
+        }
+        
+        .allergy-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .tag-contains {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .tag-free {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .tag-optional {
+            background: #fef9c3;
+            color: #854d0e;
+        }
+        
+        .ingredient-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .ingredient-table th {
+            background: var(--wine);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .ingredient-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .ingredient-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .ingredient-table td i {
+            color: var(--wine);
+            margin-right: 8px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--wine);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .back-btn:hover {
+            background: var(--wine-light);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" class="logo-img">
+                    <span class="logo-text">Premium Pastries</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">Our Story</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Allergy Information</h1>
+            <p>Your safety is our priority</p>
+        </div>
+    </div>
+
+    <div class="container page-content">
+        <!-- Warning Banner -->
+        <div class="warning-banner">
+            <div style="background: #dc2626; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-exclamation-triangle" style="color: white; font-size: 1.8rem;"></i>
+            </div>
+            <div>
+                <h3 style="color: #991b1b; margin-bottom: 8px;">Important Allergy Notice</h3>
+                <p style="color: #7f1d1d; margin: 0;">Our kitchen handles dairy, eggs, wheat, nuts, and gluten. While we take precautions, cross-contamination may occur. Please inform us of severe allergies when ordering.</p>
+            </div>
+        </div>
+
+        <!-- Allergy Grid -->
+        <h2 style="color: var(--wine-dark); margin-bottom: 20px;">Common Allergens in Our Pastries</h2>
+        
+        <div class="allergy-grid">
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-wheat-alt"></i>
+                </div>
+                <h3>Gluten / Wheat</h3>
+                <p style="color: #666; margin-bottom: 15px;">Found in most of our pastries including pies, breads, cakes, and chin chin.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Contains in most items</span>
+                    <span class="allergy-tag tag-optional">Gluten-free available on request</span>
+                </div>
+            </div>
+            
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-egg"></i>
+                </div>
+                <h3>Eggs</h3>
+                <p style="color: #666; margin-bottom: 15px;">Used in cakes, breads, puff puff, and as egg wash for pies.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Contains</span>
+                </div>
+            </div>
+            
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-cow"></i>
+                </div>
+                <h3>Dairy</h3>
+                <p style="color: #666; margin-bottom: 15px;">Butter, milk, and cream used in cakes, breads, and pastry dough.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Contains</span>
+                </div>
+            </div>
+            
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Nuts</h3>
+                <p style="color: #666; margin-bottom: 15px;">Used in some cakes, coconut bread, and optional toppings.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Contains in some items</span>
+                    <span class="allergy-tag tag-optional">Can be omitted on request</span>
+                </div>
+            </div>
+            
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                <h3>Soy</h3>
+                <p style="color: #666; margin-bottom: 15px;">Present in some margarines and emulsifiers.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Contains in small amounts</span>
+                </div>
+            </div>
+            
+            <div class="allergy-card">
+                <div class="allergy-icon">
+                    <i class="fas fa-mitten"></i>
+                </div>
+                <h3>Sesame</h3>
+                <p style="color: #666; margin-bottom: 15px;">Used on some breads and specialty items.</p>
+                <div>
+                    <span class="allergy-tag tag-contains">Select items only</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Allergy Table -->
+        <h2 style="color: var(--wine-dark); margin: 50px 0 20px;">Product-by-Product Allergy Guide</h2>
+        
+        <table class="ingredient-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Gluten</th>
+                    <th>Dairy</th>
+                    <th>Eggs</th>
+                    <th>Nuts</th>
+                    <th>Soy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Classic Meat Pie</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Butter Chin Chin</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Golden Puff Puff</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Chicken Pie</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Sausage Roll</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Vanilla Cake</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Optional</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Red Velvet Cake</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Agege Bread</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> No</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+                <tr>
+                    <td><strong>Coconut Bread</strong></td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains</td>
+                    <td><i class="fas fa-check-circle" style="color: #dc2626;"></i> Contains (coconut)</td>
+                    <td><i class="fas fa-minus-circle" style="color: #999;"></i> Trace</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Dietary Options -->
+        <div style="background: white; padding: 40px; border-radius: 12px; margin: 50px 0; box-shadow: var(--shadow-sm);">
+            <h2 style="color: var(--wine-dark); margin-bottom: 25px;"><i class="fas fa-leaf" style="color: var(--wine); margin-right: 10px;"></i> Dietary Options</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">Vegan Options</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Chin Chin</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Plain Puff Puff</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Agege Bread (no egg)</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Fruit Tarts (upon request)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">Gluten-Free Options</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Gluten-free cake (72h notice)</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-exclamation-triangle" style="color: #854d0e; margin-right: 10px;"></i> Limited availability</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-info-circle" style="color: var(--wine); margin-right: 10px;"></i> Please inquire</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 15px;">Nut-Free Options</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Meat Pie</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Chin Chin</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Puff Puff</li>
+                        <li style="margin-bottom: 10px; color: #666;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Sausage Roll</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Order with Allergies -->
+        <div style="background: var(--cream); padding: 40px; border-radius: 12px; margin: 40px 0;">
+            <h2 style="color: var(--wine-dark); margin-bottom: 20px;"><i class="fas fa-clipboard-list" style="color: var(--wine); margin-right: 10px;"></i> How to Order with Allergies</h2>
+            
+            <ol style="margin-left: 20px; color: #666; line-height: 1.8;">
+                <li style="margin-bottom: 15px;">Add items to your cart normally</li>
+                <li style="margin-bottom: 15px;">In the cart, find the <strong>"Special Instructions"</strong> box</li>
+                <li style="margin-bottom: 15px;">Clearly state your allergy and request (e.g., "No nuts, severe allergy")</li>
+                <li style="margin-bottom: 15px;">Proceed to WhatsApp and send your order</li>
+                <li style="margin-bottom: 15px;">We will confirm if we can accommodate your request</li>
+            </ol>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-lightbulb" style="color: var(--gold); font-size: 1.2rem;"></i>
+                    <strong>Pro tip:</strong> For severe allergies, call or WhatsApp us directly for the safest ordering experience.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div style="text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: var(--shadow-sm);">
+            <i class="fas fa-headset" style="font-size: 3rem; color: var(--wine); margin-bottom: 20px;"></i>
+            <h3 style="color: var(--wine-dark); margin-bottom: 15px;">Have Specific Questions?</h3>
+            <p style="color: #666; max-width: 500px; margin: 0 auto 25px;">Our team can help you identify safe options for your dietary needs.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/2348123456789" style="background: #25D366; color: white; padding: 14px 28px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
+                <a href="tel:+2348123456789" style="background: var(--wine); color: white; padding: 14px 28px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600;">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <footer style="margin-top: 80px;">
+        <div class="container">
+            <div style="text-align: center; padding: 30px 0; color: rgba(255,255,255,0.7);">
+                <p>&copy; 2024 Premium Pastries. Your safety is our priority.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

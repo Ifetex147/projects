@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Pastries</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Elegant pairing -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" class="logo-img">
+                    <span class="logo-text">Premium Pastries</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="#" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Since 2019</span>
+                <h1>Artisan Pastries<br>Crafted with <span class="accent">Elegance</span></h1>
+                <p class="hero-text">Traditional Nigerian recipes meet French patisserie technique. Every bite tells a story.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">
+                        <i class="fas fa-utensils"></i>
+                        Order Now
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        Our Story
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Fresh Daily</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Nationwide Delivery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Premium Ingredients</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-frame" style="background-image: url('images/premiumfirstchoice.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: 500px; overflow: hidden !important; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; position: relative;">
+                    <div class="frame-pattern" style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 2px dashed rgba(198, 161, 91, 0.3); border-radius: inherit; pointer-events: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Signature Selections</span>
+                <h2>Our Bestsellers</h2>
+                <p class="section-description">Handcrafted daily with passion and the finest ingredients</p>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- Meat Pie -->
+                <div class="featured-card">
+                    <div class="card-badge">🍖 Most Popular</div>
+                    <div class="card-image meat-pie">
+                        <img src="images/meatpie.jpeg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>Classic Meat Pie</h3>
+                        <p class="card-desc">Flaky butter pastry filled with spiced minced meat</p>
+                        <div class="card-footer">
+                            <span class="price">₦1500</span>
+                            <button class="btn-add" data-id="1">
+                                <i class="fas fa-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chin Chin -->
+                <div class="featured-card">
+                    <div class="card-badge">✨ Customer Favorite</div>
+                    <div class="card-image chin-chin">
+                    <img src="images/chinchin.jpeg" alt="" >
+                    </div>
+                    <div class="card-content">
+                        <h3>Butter Chin Chin</h3>
+                        <p class="card-desc">Crunchy, buttery Nigerian snack (500g)</p>
+                        <div class="card-footer">
+                            <span class="price">₦2,500</span>
+                            <button class="btn-add" data-id="2">
+                                <i class="fas fa-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puff Puff -->
+                <div class="featured-card">
+                    <div class="card-badge">🔥 Bestseller</div>
+                    <div class="card-image puff-puff">
+                    <img src="images/puff.jpeg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3>Golden Puff Puff</h3>
+                        <p class="card-desc">Soft, fluffy dough balls (Pack of 10)</p>
+                        <div class="card-footer">
+                            <span class="price">₦1,500</span>
+                            <button class="btn-add" data-id="3">
+                                <i class="fas fa-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Collection</span>
+                <h2>Full Menu</h2>
+                <p class="section-description">All pastries baked fresh every morning</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="snacks">Nigerian Snacks</button>
+                <button class="filter-btn" data-filter="cakes">Cakes</button>
+                <button class="filter-btn" data-filter="bread">Bread</button>
+                <button class="filter-btn" data-filter="special">Special Orders</button>
+            </div>
+            
+            <div class="menu-grid" id="menu-grid">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">Our Heritage</span>
+                    <h2>Where Tradition Meets <span class="accent">Elegance</span></h2>
+                    <p class="about-text">Premium Pastries was born from a simple belief: every bite should feel special.
+
+                        What started as a passion for baking soon became a commitment to crafting desserts that bring comfort, joy, and unforgettable taste. We blend tradition with creativity, using carefully selected ingredients, perfected recipes, and a deep love for quality to create pastries that speak to both the heart and the senses.</p>
+                    <p class="about-text">Every cake, loaf, and dessert we make is thoughtfully prepared not just to satisfy hunger, but to create moments. Moments of celebration. Moments of comfort. Moments worth remembering.
+
+                        At Premium Pastries, we don't just bake.
+                        We create experiences, one delicious masterpiece at a time.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">over4+</span>
+                            <span class="stat-label">Years of Service</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">over5k+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">over25+</span>
+                            <span class="stat-label">Signature Recipes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-frame-large" style="width: 100%; height: 500px; overflow: hidden; position: relative; border-radius: 20% 80% 30% 70% / 50% 40% 60% 50%;">
+                        <img src="images/premiumpastrieskitchen.jpeg" alt="the face behind Premium Pastries" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        <div class="frame-decoration" style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 2px solid var(--gold); border-radius: inherit; opacity: 0.3; pointer-events: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar - Wine Theme -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <div class="cart-title">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>Your Order</h3>
+            </div>
+            <button class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <span class="empty-sub">Add some delicious pastries to begin</span>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="total-price">₦0</span>
+            </div>
+            
+            <div class="customer-details">
+                <input type="text" placeholder="Your name" class="customer-name">
+                <input type="tel" placeholder="Phone number" class="customer-phone">
+                <select class="delivery-option">
+                    <option value="">Pickup or delivery?</option>
+                    <option value="pickup">Store Pickup (Ikeja)</option>
+                    <option value="delivery">Lagos Delivery (+₦1,500)</option>
+                </select>
+                <textarea placeholder="Special instructions (allergies, preferences...)" class="special-notes"></textarea>
+            </div>
+            
+            <button class="whatsapp-btn" disabled>
+                <i class="fab fa-whatsapp"></i>
+                Confirm Order via WhatsApp
+            </button>
+            
+            <p class="order-note">
+                <i class="fas fa-clock"></i>
+                We'll confirm your order within 30 minutes
+            </p>
+        </div>
+    </div>
+    
+    <div class="cart-overlay"></div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Visit Us</span>
+                    <h2>Our Bakery in <span class="accent">Ebonyi</span></h2>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>10 Marcel Eze Street, Abakaliki<br>Ebonyi, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Monday - Saturday: 7am - 7pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Contact</h4>
+                                <p>+234 8153710020<br>premiumpasteries@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+234 8153710020<br>Mon-Sat: 8am - 7pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-container">
+                        <h3>Send us a message</h3>
+                        <p>For catering inquiries, custom orders, or feedback</p>
+                        
+                        <form id="contactForm" onsubmit="event.preventDefault(); sendContactToWhatsApp();">
+                            <input type="text" id="contactName" placeholder="Your name" required>
+                            <input type="email" id="contactEmail" placeholder="Email address">
+                            <input type="tel" id="contactPhone" placeholder="Phone number" required>
+                            <select id="contactSubject" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="catering">Catering</option>
+                                <option value="custom">Custom Cake</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="delivery">Delivery Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <textarea id="contactMessage" placeholder="Your message" rows="4" required></textarea>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fab fa-whatsapp"></i>
+                                Send via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" style="width: 100px; height: auto; max-height: 40px; object-fit: contain; display: block; margin-bottom: 15px;">
+                    <p class="footer-tagline">Your pastries, baked with elegance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/+2348153710020"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <a href="#home">Home</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#about">Our Story</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Orders</h4>
+                        <a href="how-to-order.html">How to Order</a>
+                        <a href="delivery-areas.html">Delivery Areas</a>
+                        <a href="catering.html">Catering</a>
+                        <a href="faq.html">FAQs</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="allergy-info.html">Allergy Information</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Premium Pastries. All rights reserved.</p>
+                <p class="credit">Crafted with <i class="fas fa-heart"></i> </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Premium Pastries | Southeast Nigeria</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            background: var(--wine-dark, #4A1E22);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .policy-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+            border: 1px solid var(--gold-light);
+        }
+        
+        .policy-section h2 {
+            color: var(--wine-dark);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .policy-section h2 i {
+            color: var(--wine);
+        }
+        
+        .policy-section h3 {
+            color: var(--wine);
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        .policy-section p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .policy-section ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .policy-section li {
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        
+        .policy-section li i {
+            color: var(--wine);
+            width: 20px;
+        }
+        
+        .highlight-box {
+            background: var(--wine-soft);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 6px solid var(--wine);
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .data-table th {
+            background: var(--wine);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .badge-green {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .badge-red {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, var(--wine), var(--wine-dark));
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .contact-card h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 25px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            padding: 14px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .call-btn {
+            background: white;
+            color: var(--wine);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--wine);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .back-btn:hover {
+            background: var(--wine-light);
+            transform: translateY(-2px);
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .policy-section {
+                padding: 25px;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" class="logo-img">
+                    <span class="logo-text">Premium Pastries</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">Our Story</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy matters to us. Here's how we protect your data.</p>
+        </div>
+    </div>
+
+    <div class="container page-content">
+        <!-- TL;DR Section -->
+        <div class="policy-section">
+            <h2><i class="fas fa-bolt"></i> Quick Summary</h2>
+            <div class="highlight-box" style="background: #f0f7ff; border-left-color: #3b82f6;">
+                <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 10px;">📋 Here's what you need to know:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #166534;"></i> We only collect what's necessary for your order</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #166534;"></i> Your cart is saved on YOUR device, not our servers</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #166534;"></i> We NEVER sell your information</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #166534;"></i> No credit card details are stored</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #166534;"></i> You can request data deletion anytime</li>
+                </ul>
+            </div>
+            <p style="color: var(--wine); font-weight: 600; margin-top: 20px;"><i class="fas fa-map-pin"></i> Last Updated: February 2024</p>
+        </div>
+
+        <!-- Information We Collect -->
+        <div class="policy-section">
+            <h2><i class="fas fa-database"></i> Information We Collect</h2>
+            
+            <h3>📝 When You Place an Order:</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Information</th>
+                        <th>Why We Collect It</th>
+                        <th>How Long We Keep It</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Your Name</strong></td>
+                        <td>To address you properly and confirm your order</td>
+                        <td>30 days <span class="badge badge-green">Auto-deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone Number</strong></td>
+                        <td>To contact you via WhatsApp/call about your order</td>
+                        <td>30 days <span class="badge badge-green">Auto-deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Delivery Address</strong></td>
+                        <td>To deliver your pastries (delivery orders only)</td>
+                        <td>30 days <span class="badge badge-green">Auto-deleted</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Order Details</strong></td>
+                        <td>To prepare and fulfill your order correctly</td>
+                        <td>90 days (for quality assurance)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="margin-top: 40px;">💻 Automatically Collected:</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Information</th>
+                        <th>Why We Collect It</th>
+                        <th>Where It's Stored</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Cart Items</strong></td>
+                        <td>So your cart doesn't disappear when you close your browser</td>
+                        <td>✅ YOUR device (localStorage)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Website Usage</strong></td>
+                        <td>To improve our website and see what pastries are popular</td>
+                        <td>Anonymous analytics</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight-box" style="margin-top: 30px;">
+                <p style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fas fa-credit-card" style="font-size: 1.5rem; color: var(--wine);"></i>
+                    <strong style="font-size: 1.1rem;">We DO NOT collect or store credit/debit card details.</strong>
+                </p>
+                <p style="margin-top: 10px; margin-bottom: 0;">Payments are made via cash on delivery, bank transfer, or POS on delivery. We never see or store your payment information.</p>
+            </div>
+        </div>
+
+        <!-- How We Use Your Information -->
+        <div class="policy-section">
+            <h2><i class="fas fa-cogs"></i> How We Use Your Information</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div style="background: #f9f9f9; padding: 25px; border-radius: 8px;">
+                    <h4 style="color: var(--wine-dark); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-check-circle" style="color: #166534;"></i> What We Do:
+                    </h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Process your orders</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Deliver your pastries</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Contact you about your order</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: #166534; margin-right: 10px;"></i> Improve our recipes and service</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #fff4f4; padding: 25px; border-radius: 8px;">
+                    <h4 style="color: #991b1b; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-times-circle"></i> What We NEVER Do:
+                    </h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-times" style="color: #991b1b; margin-right: 10px;"></i> Sell your information</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-times" style="color: #991b1b; margin-right: 10px;"></i> Spam your email/phone</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-times" style="color: #991b1b; margin-right: 10px;"></i> Store payment details</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-times" style="color: #991b1b; margin-right: 10px;"></i> Share your data with third parties</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local Storage Explanation -->
+        <div class="policy-section">
+            <h2><i class="fas fa-save"></i> Local Storage - How Your Cart Saves</h2>
+            
+            <div style="display: flex; align-items: flex-start; gap: 30px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <p>Our website uses your browser's <strong>local storage</strong> to remember your cart. This is different from cookies.</p>
+                    
+                    <div style="background: var(--cream); padding: 25px; border-radius: 8px; margin: 25px 0;">
+                        <p style="font-weight: 600; color: var(--wine-dark); margin-bottom: 15px;">✅ Benefits of Local Storage:</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--wine); margin-right: 10px;"></i> No account or login required</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--wine); margin-right: 10px;"></i> Data stays on YOUR device</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--wine); margin-right: 10px;"></i> Cart persists even if you close your browser</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--wine); margin-right: 10px;"></i> We cannot access your cart - it's yours only</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="color: #666;"><i class="fas fa-info-circle" style="color: var(--wine);"></i> You can clear your cart anytime by removing items or clearing your browser data.</p>
+                </div>
+                
+                <div style="background: var(--wine-soft); padding: 25px; border-radius: 8px; min-width: 250px;">
+                    <i class="fas fa-mobile-alt" style="font-size: 2.5rem; color: var(--wine); margin-bottom: 15px;"></i>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 10px;">Cart Storage Location:</h4>
+                    <p style="font-size: 1.2rem; font-weight: 700; color: var(--wine); margin-bottom: 5px;">🔒 YOUR DEVICE</p>
+                    <p style="color: #666; font-size: 0.95rem;">Not our servers. Not the cloud. Just your phone or computer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WhatsApp Communication -->
+        <div class="policy-section">
+            <h2><i class="fab fa-whatsapp"></i> WhatsApp Communication</h2>
+            
+            <p>When you place an order, you'll be redirected to WhatsApp to send your order details to our business account.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;">
+                <div style="text-align: center;">
+                    <div style="background: #25D366; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.8rem; color: white;"></i>
+                    </div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Order Confirmation</h4>
+                    <p style="color: #666; font-size: 0.9rem;">We confirm your order details via WhatsApp</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: #25D366; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <i class="fas fa-truck" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Delivery Updates</h4>
+                    <p style="color: #666; font-size: 0.9rem;">We send delivery status updates</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: #25D366; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <i class="fas fa-headset" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Customer Support</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Questions? Chat with us directly</p>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: #666; font-style: italic;">Your WhatsApp conversations with us are private and only used for order-related communication. We don't add you to broadcast lists without your consent.</p>
+        </div>
+
+        <!-- Data Retention & Deletion -->
+        <div class="policy-section">
+            <h2><i class="fas fa-clock"></i> Data Retention & Deletion</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h3 style="color: var(--wine-dark);">How Long We Keep Data:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-history" style="color: var(--wine); margin-right: 10px;"></i> Order information: <strong>90 days</strong></li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-history" style="color: var(--wine); margin-right: 10px;"></i> Contact details: <strong>30 days</strong></li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-history" style="color: var(--wine); margin-right: 10px;"></i> Delivery addresses: <strong>30 days</strong></li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-history" style="color: var(--wine); margin-right: 10px;"></i> WhatsApp chats: <strong>As long as needed</strong></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--wine-dark);">Request Data Deletion:</h3>
+                    <p style="color: #666; margin-bottom: 20px;">You can request deletion of your personal data at any time.</p>
+                    <a href="https://wa.me/2348123456789" style="display: inline-flex; align-items: center; gap: 10px; background: var(--wine); color: white; padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 600;">
+                        <i class="fab fa-whatsapp"></i> Request Deletion on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Rights -->
+        <div class="policy-section">
+            <h2><i class="fas fa-gavel"></i> Your Rights (NDPR Compliance)</h2>
+            
+            <p>As a customer in Nigeria, you have rights under the <strong>Nigeria Data Protection Regulation (NDPR)</strong>.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
+                <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <i class="fas fa-eye" style="font-size: 1.5rem; color: var(--wine); margin-bottom: 10px;"></i>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Right to Access</h4>
+                    <p style="color: #666;">Request a copy of the data we have about you</p>
+                </div>
+                <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <i class="fas fa-edit" style="font-size: 1.5rem; color: var(--wine); margin-bottom: 10px;"></i>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Right to Rectification</h4>
+                    <p style="color: #666;">Correct inaccurate information</p>
+                </div>
+                <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <i class="fas fa-trash-alt" style="font-size: 1.5rem; color: var(--wine); margin-bottom: 10px;"></i>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Right to Erasure</h4>
+                    <p style="color: #666;">Request deletion of your data</p>
+                </div>
+                <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <i class="fas fa-ban" style="font-size: 1.5rem; color: var(--wine); margin-bottom: 10px;"></i>
+                    <h4 style="color: var(--wine-dark); margin-bottom: 8px;">Right to Object</h4>
+                    <p style="color: #666;">Opt out of data processing</p>
+                </div>
+            </div>
+            
+            <p>To exercise any of these rights, simply contact us via WhatsApp or email. We'll respond within 48 hours.</p>
+        </div>
+
+        <!-- Updates to This Policy -->
+        <div class="policy-section">
+            <h2><i class="fas fa-sync-alt"></i> Updates to This Policy</h2>
+            
+            <p>We may update this privacy policy occasionally to reflect changes in our practices or for legal reasons.</p>
+            
+            <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-calendar-alt" style="color: var(--wine);"></i>
+                    <strong>Current Version:</strong> February 2024
+                </p>
+                <p style="margin: 10px 0 0 35px; color: #666;">Significant changes will be communicated via WhatsApp or website notice.</p>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-card">
+            <i class="fas fa-shield-alt" style="font-size: 3rem; color: rgba(255,255,255,0.9); margin-bottom: 20px;"></i>
+            <h3>Questions About Your Privacy?</h3>
+            <p>We're here to help. Contact our Data Protection Officer:</p>
+            
+            <div style="margin-bottom: 30px;">
+                <p style="margin-bottom: 8px;"><i class="fas fa-user" style="margin-right: 10px;"></i> Miss. Blessing Okpeani - Data Protection Officer</p>
+                <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 10 Marcel Eze Street, Abakaliki, Ebonyi State</p>
+            </div>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/2348123456789" class="contact-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: 0815 371 0020
+                </a>
+                <a href="tel:+2348123456789" class="contact-btn call-btn">
+                    <i class="fas fa-phone"></i> Call: 0815 371 0020
+                </a>
+                <a href="mailto:privacy@premiumpastries.ng" class="contact-btn" style="background: rgba(255,255,255,0.2); color: white;">
+                    <i class="fas fa-envelope"></i> premiumpastries@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <a href="terms.html" class="back-btn" style="background: var(--gold, #C6A15B); margin-left: 15px;">
+                <i class="fas fa-file-contract"></i>
+                Terms of Service
+            </a>
+        </div>
+        
+        <div class="footer-note">
+            <p><i class="fas fa-balance-scale"></i> This privacy policy complies with the Nigeria Data Protection Regulation (NDPR) 2019.</p>
+            <p style="margin-top: 10px;">© 2024 Premium Pastries. All rights reserved. Freshly baked in Awka, Anambra.</p>
+        </div>
+    </div>
+
+    <footer style="margin-top: 40px; background: var(--wine-dark);">
+        <div class="container">
+            <div style="text-align: center; padding: 30px 0; color: rgba(255,255,255,0.7);">
+                <p>Your privacy is protected under Nigerian law. NDPR compliant.</p>
+                <p style="margin-top: 10px;">🇳🇬 Proudly serving Anambra, Enugu, Imo, Abia & Ebonyi 🇳🇬</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

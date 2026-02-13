@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Premium Pastries</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            background: var(--wine-dark, #4A1E22);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-section {
+            margin-bottom: 60px;
+        }
+        
+        .faq-section h2 {
+            color: var(--wine-dark);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--wine-soft);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--wine-dark);
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--wine-soft);
+        }
+        
+        .faq-question i {
+            color: var(--wine);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.show {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, var(--wine), var(--wine-dark));
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .contact-card h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            padding: 16px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .call-btn {
+            background: white;
+            color: var(--wine);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--wine);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .back-btn:hover {
+            background: var(--wine-light);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpeg" alt="Premium Pastries" class="logo-img">
+                    <span class="logo-text">Premium Pastries</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">Our Story</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about ordering from Premium Pastries</p>
+        </div>
+    </div>
+
+    <div class="container page-content">
+        <!-- Orders FAQ -->
+        <div class="faq-section">
+            <h2><i class="fas fa-shopping-bag" style="margin-right: 10px; color: var(--wine);"></i> Orders & Payment</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I place an order?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Simply browse our menu, add items to your cart, fill in your details, and click "Confirm Order via WhatsApp". Your order will be sent directly to our team via WhatsApp, and we'll confirm within 30 minutes.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We accept cash on delivery, bank transfer, and POS payments on delivery. For bank transfers, you'll receive our account details in the WhatsApp message.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is there a minimum order amount?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    No minimum order for pickup. For delivery, minimum order is ₦3,000. Catering orders start at ₦25,000.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I modify or cancel my order?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes, please contact us immediately via WhatsApp. Modifications are possible up to 1 hour before your selected pickup/delivery time. Cancellations made less than 1 hour before may incur a small fee.
+                </div>
+            </div>
+        </div>
+
+        <!-- Delivery FAQ -->
+        <div class="faq-section">
+            <h2><i class="fas fa-truck" style="margin-right: 10px; color: var(--wine);"></i> Delivery & Pickup</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How much is delivery?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Delivery fee is ₦1,500 within Abakaliki. We offer FREE delivery on all orders above ₦15,000 within Abakaliki.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What areas do you deliver to?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We deliver to all Southeast region. Check our Delivery Areas page for full list.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does delivery take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Delivery typically takes 1hr-1day  depending  your location. We'll share a tracking link via WhatsApp when your order is out for delivery.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I pick up my order?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! Our bakery is located at 10 Marcel Eze Street, Abakaliki. Orders are usually ready within 45 minutes for pickup. Hours: Mon-Sat 7am-7pm, Sun 9am-4pm.
+                </div>
+            </div>
+        </div>
+
+        <!-- Products FAQ -->
+        <div class="faq-section">
+            <h2><i class="fas fa-cookie-bite" style="margin-right: 10px; color: var(--wine);"></i> Products & Ingredients</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are your pastries baked fresh daily?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! All our pastries are baked fresh every morning. We don't sell day-old products. What you don't see on the menu is what's already sold out!
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you have vegan or gluten-free options?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We currently offer limited vegan options (our chin chin and some breads). Gluten-free options are available upon request for custom orders with 48 hours notice.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you use preservatives?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    No. We use only natural ingredients with no artificial preservatives. That's why our pastries are best consumed within 24-48 hours.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I order custom cakes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! We specialize in custom cakes for birthdays, weddings, and corporate events. Please contact us at least 7 days in advance. Prices start at ₦25,000.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What are your most popular items?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Our Classic Meat Pie, Butter Chin Chin, and Golden Puff Puff are customer favorites. The Red Velvet Cake is also extremely popular for celebrations!
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <h3>Still have questions?</h3>
+            <p>We're here to help! Reach out to us directly and we'll get back to you within 30 minutes.</p>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/2348123456789" class="contact-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp Us
+                </a>
+                <a href="tel:+2348123456789" class="contact-btn call-btn">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+                <a href="index.html#contact" class="contact-btn" style="background: rgba(255,255,255,0.2); color: white;">
+                    <i class="fas fa-envelope"></i>
+                    Contact Form
+                </a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.95rem;">
+                <i class="fas fa-clock"></i> Response time: Mon-Sat, 8am-7pm
+            </p>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <footer style="margin-top: 80px;">
+        <div class="container">
+            <div style="text-align: center; padding: 30px 0; color: rgba(255,255,255,0.7);">
+                <p>&copy; 2024 Premium Pastries. Questions? We've got answers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
