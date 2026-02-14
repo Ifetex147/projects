@@ -40,7 +40,7 @@ const products = [
         category: "snacks",
         price: 2000,
         description: "Flaky pastry filled with tender chicken & vegetables",
-        image: "images/chickenpie.jpeg",
+        image: "images/Chickenpie.jpeg",
         popular: false
     },
     {
